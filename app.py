@@ -22,7 +22,7 @@ def index():
     if 'board' not in session:
         session['board'] = [[' ' for _ in range(3)] for _ in range(3)]
         session['current_player'] = 'X'
-    return render_template('game.html', board=session['board'], current_player=session['current_player'])
+    return render_template('index.html', board=session['board'], current_player=session['current_player'])
 
 @app.route('/play/<int:row>/<int:col>')
 def play(row, col):
